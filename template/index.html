@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<link rel="stylesheet" href="../static/index_style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-SOMEHASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+
+<header class="header-wrapper">
+    <nav class="nav-container">
+        <div class="nav-logo">HhannaFranchesca</div>
+
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- spacer para balanced ang grid -->
+        <div class="nav-spacer"></div>
+
+        <div class="nav-indicator"></div>
+    </nav>
+</header>
+
+
+<!-- HOME BANNER -->
+<section id="home" class="home-banner">
+    <!-- Text on the left -->
+    <div class="banner-content">
+        <p class="intro-text">Hello, I’m</p>
+        <h1>
+            <span class="first-name">Hanna Franchesca</span><br>
+            <span class="last-name">Herradura</span>
+        </h1>
+        <p class="role-text">Web Developer | UI/UX Designer</p>
+
+        <!-- Buttons container -->
+        <div class="hero-buttons">
+           <div class="hero-buttons">
+                <a href="../static/RESUME1.pdf" class="cv-button" target="_blank">
+                    <i class="fas fa-file-pdf"></i> View My CV
+                </a>
+                <a href="#projects" class="projects-button">
+                    <i class="fas fa-arrow-right"></i> View Projects
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Profile Image on the right -->
+    <div class="profile-wrapper">
+        <div class="profile-border">
+            <img src="../static/me.jpg" alt="Profile Image">
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT ME SECTION -->
+<section id="about" class="about-section">
+    <div class="about-container">
+        <!-- Left: About Me text -->
+        <div class="about-card">
+            <h2>About Me</h2>
+            <p>Hello! I’m Hanna Franchesca Herradura, a passionate Web Developer and UI/UX Designer. 
+               I specialize in creating web-based systems, interactive dashboards, and user-centered designs 
+               that improve workflow efficiency and enhance user experiences.</p>
+            
+            <p>I’ve worked on several projects, including HR management systems, performance analytics dashboards, 
+               and more. I love learning new technologies and continuously improving my skills to deliver 
+               high-quality digital solutions.</p>
+        </div>
+
+        <!-- Right: Skills -->
+        <div class="skills-card">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <span>Web Development</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-pencil-ruler"></i>
+                    <span>UI/UX Design</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <span>Python & Flask</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <span>MySQL & Database Management</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript & Frontend</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Responsive Design</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-php"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Flutter & Dart</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- CERTIFICATIONS SECTION -->
+<section id="certifications" class="certifications-section">
+    <div class="section-header">
+        <h2>Certifications</h2>
+        <p>Some of the professional courses and certifications I've completed</p>
+    </div>
+
+    <!-- Swiper container -->
+    <div class="swiper certifications-container">
+        <div class="swiper-wrapper">
+            <!-- 1 -->
+            <div class="swiper-slide cert-card">
+                <div class="cert-img-wrapper">
+                    <img src="../static/c1.png" alt="Certification 1">
+                </div>
+                <h3>Data Privacy Awareness</h3>
+                <p>Issued by ICT Literacy and Competency Development Bureau, 2025</p>
+                <a href="../static/cert_data.pdf" class="cert-view-btn" target="_blank">View Certificate</a>
+            </div>
+
+            <!-- 2 -->
+            <div class="swiper-slide cert-card">
+                <div class="cert-img-wrapper">
+                    <img src="../static/c2.png" alt="Certification 2">
+                </div>
+                <h3>Digital Safety and Security Awareness</h3>
+                <p>Issued by Cisco Networking Academy, 2025</p>
+                <a href="../static/Digital.pdf" class="cert-view-btn" target="_blank">View Certificate</a>
+            </div>
+
+            <!-- 3 -->
+            <div class="swiper-slide cert-card">
+                <div class="cert-img-wrapper">
+                    <img src="../static/c7.png" alt="Certification 7">
+                </div>
+                <h3>Cybersecurity for ICT Professionals</h3>
+                <p>Issued by DICT Region V - Catanduanes, 2025</p>
+                <a href="../static/Cybersecurity for ICT Professionals .pdf" class="cert-view-btn" target="_blank">View Certificate</a>
+            </div>
+
+
+            <!-- 4 -->
+            <div class="swiper-slide cert-card">
+                <div class="cert-img-wrapper">
+                    <img src="../static/c4.png" alt="Certification 4">
+                </div>
+                <h3>Stay Safe Online Cyber Security Basics</h3>
+                <p>Issued by DICT Aurora - Region 3, 2025</p>
+                <a href="../static/Stay.pdf" class="cert-view-btn" target="_blank">View Certificate</a>
+            </div>
+
+            <!-- 5 -->
+            <div class="swiper-slide cert-card">
+                <div class="cert-img-wrapper">
+                    <img src="../static/c5.png" alt="Certification 5">
+                </div>
+                <h3>Operating Systems Basics</h3>
+                <p>Issued by Cisco Networking Academy, 2025</p>
+                <a href="../static/Operating Systems Basics.pdf" class="cert-view-btn" target="_blank">View Certificate</a>
+            </div>
+
+            <!-- 6 -->
+            <div class="swiper-slide cert-card">
+                <div class="cert-img-wrapper">
+                    <img src="../static/c6.png" alt="Certification 6">
+                </div>
+                <h3>Linux Essentials</h3>
+                <p>Issued by Cisco Networking Academy, 2025</p>
+                <a href="../static/Linux Essentials.pdf" class="cert-view-btn" target="_blank">View Certificate</a>
+            </div>
+
+            <!-- 7 -->
+            <div class="swiper-slide cert-card">
+                <div class="cert-img-wrapper">
+                    <img src="../static/c3.png" alt="Certification 3">
+                </div>
+                <h3>Introduction to Cybersecurity</h3>
+                <p>Issued by Cisco Networking Academy, 2025</p>
+                <a href="../static/Introduction.pdf" class="cert-view-btn" target="_blank">View Certificate</a>
+            </div>
+            
+        </div>
+
+        <!-- Navigation buttons -->
+        
+        <!-- Pagination dots -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+
+<!--PROJECT -->
+<section id="projects" class="projects-section">
+    <div class="section-header">
+        <h2>Projects</h2>
+        <p> Web-based systems and dashboards I've built</p>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="projects-filter">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="web">Web Development</button>
+        <button class="filter-btn" data-category="mobile">Mobile</button>
+        <button class="filter-btn" data-category="design">UI/UX Design</button>
+    </div>
+
+    <div class="projects-container">
+       <div class="project-card" data-category="web">
+            <div class="project-img-wrapper">
+                <img src="../static/d1.png" alt="HRSync Web HR Platform">
+            </div>
+            <h3>HRSync: Web HR Platform</h3>
+            <p>A web-based HR system for managing employees, performance records, and administrative workflows.</p>
+
+            <!-- Rounded badges per tech -->
+            <div class="project-tech-container">
+                <span class="project-tech">Python</span>
+                <span class="project-tech">Flask</span>
+                <span class="project-tech">MySQL</span>
+                <span class="project-tech">HTML</span>
+                <span class="project-tech">CSS</span>
+                <span class="project-tech">JS</span>
+                <span class="project-tech">Bootstrap</span>
+            </div>
+
+            <a href="https://github.com/hhannafranchesca/HRSync" target="_blank" class="project-btn">
+                View Project
+            </a>
+        </div>
+
+        <!-- WEB 2-->
+        <div class="project-card" data-category="web">
+            <div class="project-img-wrapper">
+                <img src="../static/d2.png" alt="Sheware E-commerce Web">
+            </div>
+            <h3>Sheware: E-commerce Web Platform</h3>
+            <p>An online shopping platform with product management, user accounts, and secure checkout features.</p>
+
+            <!-- Rounded badges per tech -->
+            <div class="project-tech-container">
+                <span class="project-tech">Python</span>
+                <span class="project-tech">Flask</span>
+                <span class="project-tech">SQLite</span>
+                <span class="project-tech">HTML</span>
+                <span class="project-tech">CSS</span>
+                <span class="project-tech">JS</span>
+                <span class="project-tech">Bootstrap</span>
+            </div>
+
+            <a href="https://github.com/hhannafranchesca/SHEWARE" target="_blank" class="project-btn">
+                View Project
+            </a>
+        </div>
+
+        <!-- WEB 3-->
+        <div class="project-card" data-category="web">
+            <div class="project-img-wrapper">
+                <img src="../static/d3.png" alt="Sheware E-commerce Web">
+            </div>
+            <h3>School Permit System</h3>
+            <p>A system designed to handle school permit requests, approvals, and record management efficiently.</p>
+
+            <!-- Rounded badges per tech -->
+            <div class="project-tech-container">
+                <span class="project-tech">PHP</span>
+                <span class="project-tech">MySQL</span>
+                <span class="project-tech">PDO</span>
+                <span class="project-tech">Bootstrap</span>
+            </div>
+
+            <a href="https://github.com/hhannafranchesca/School-Permit-System" target="_blank" class="project-btn">
+                View Project
+            </a>
+        </div>
+
+         <!-- WEB 3-->
+
+        <div class="project-card" data-category="web">
+            <div class="project-img-wrapper">
+                <img src="../static/d10.png" alt="Sheware E-commerce Web">
+            </div>
+            <h3>NLGMINHS Enrollment System</h3>
+            <p>A desktop enrollment system for managing student registration and academic records.</p>
+
+            <!-- Rounded badges per tech -->
+            <div class="project-tech-container">
+                <span class="project-tech">C#</span>
+                <span class="project-tech">MySQL</span>
+                <span class="project-tech">WinForms </span>
+            </div>
+
+            <a href="https://github.com/hhannafranchesca/NLGMINHS-Enrollment-System" target="_blank" class="project-btn">
+                View Project
+            </a>
+        </div>
+         <!-- web 4 -->
+         <div class="project-card" data-category="web">
+            <div class="project-img-wrapper">
+                <img src="../static/d4.png" alt="Sheware E-commerce Web">
+            </div>
+            <h3>A&D Trading Cashiering System</h3>
+            <p>A desktop-based cashiering system for processing sales, inventory, and transaction records.</p>
+
+            <!-- Rounded badges per tech -->
+            <div class="project-tech-container">
+                <span class="project-tech">C#</span>
+                <span class="project-tech">MySQL</span>
+                <span class="project-tech">WinForms </span>
+            </div>
+
+            <a href="https://github.com/hhannafranchesca/A-D-Trading-Cashiering-System/upload" target="_blank" class="project-btn">
+                View Project
+            </a>
+        </div>
+
+         <!-- MOBILE -->
+        <div class="project-card" data-category="mobile">
+            <div class="project-img-wrapper">
+                <img src="../static/M1.png" alt="Performance Analytics Mobile App">
+            </div>
+            <h3>Crave: UI/UX Mobile Design</h3>
+            <p>A modern food app interface designed for seamless ordering and user experience.</p>
+            <div class="project-tech-container">
+                <span class="project-tech">Figma</span>
+            </div>
+            <a href="https://www.figma.com/proto/jeikL3blZvgxCG2PKCE6xB/crave?t=NXe1AAVdWzih1gSr-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=45-40" target="_blank" class="project-btn">
+                View Project
+            </a>
+        </div>
+
+        <div class="project-card" data-category="mobile">
+            <div class="project-img-wrapper">
+                <img src="../static/M2.png" alt="Performance Analytics Mobile App">
+            </div>
+            <h3>Vital Care: UI/UX Mobile Design</h3>
+            <p>A healthcare mobile app UI focused on accessibility, clarity, and patient interaction.</p>
+            <div class="project-tech-container">
+                <span class="project-tech">Figma</span>
+            </div>
+            <a href="https://www.figma.com/proto/HUYN5CLzL052gZVXEn0Cig/Untitled?t=NXe1AAVdWzih1gSr-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=0-1" target="_blank" class="project-btn">
+                View Project
+            </a>
+        </div>
+
+        <!--<div class="project-card" data-category="mobile">
+            <div class="project-img-wrapper">
+                <img src="../static/project2.png" alt="Performance Analytics Mobile App">
+            </div>
+            <h3>Crave: UI/UX Mobile Design</h3>
+            <div class="project-tech-container">
+                <span class="project-tech">Figma</span>
+            </div>
+            <a href="https://link-to-dashboard.com" target="_blank" class="project-btn">
+                View Project
+            </a>
+        </div>-->
+
+
+
+          <!-- FIGMA -->
+        <div class="project-card" data-category="design">
+            <div class="project-img-wrapper">
+                <img src="../static/d5.png" alt="Events Rental Hub UI/UX">
+            </div>
+            <h3>Events Rental Hub: UI/UX Design</h3>
+            <p>A user interface design focused on event rental booking and service management.</p>
+            <div class="project-tech-container">
+                <span class="project-tech">Figma</span>
+            </div>
+            <a href="https://www.figma.com/proto/2zjbgUNCjeImpbfGFdFKgJ/CLIENT-5?node-id=59-356&t=3Hrv1wAJ0K5s4uXT-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=59%3A356" target="_blank" class="project-btn">View Project</a>
+        </div>
+          <!-- FIGMA -->
+        <div class="project-card" data-category="design">
+            <div class="project-img-wrapper">
+                <img src="../static/d6.png" alt="Events Rental Hub UI/UX">
+            </div>
+            <h3>ASTRO'S SOLE: UI/UX Design</h3>
+            <p>A stylish landing page design for a footwear brand with a strong visual identity.</p>
+            <div class="project-tech-container">
+                <span class="project-tech">Figma</span>
+            </div>
+            <a href="https://www.figma.com/proto/pILRO6EDF41OV3XF0qMlqp/CLIENT-4_-ASTRO-S-SOLE-LANDING-PAGE-DESIGN?node-id=1-32&t=3Hrv1wAJ0K5s4uXT-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card" data-category="design">
+            <div class="project-img-wrapper">
+                <img src="../static/d9.png" alt="Events Rental Hub UI/UX">
+            </div>
+            <h3>A&D Electoric Parts and Equipment Trading: UI/UX Design</h3>
+            <p>A professional UI design for showcasing electrical products and business services.</p>
+            <div class="project-tech-container">
+                <span class="project-tech">Figma</span>
+            </div>
+            <a href="https://www.figma.com/proto/5s35xV3pMPH29tWZvrcFZ9/CLIENT-3_-A-D-LANDING-PAGE-DESIGN?node-id=9-425&starting-point-node-id=9%3A425" target="_blank" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card" data-category="design">
+            <div class="project-img-wrapper">
+                <img src="../static/d7.png" alt="Events Rental Hub UI/UX">
+            </div>
+            <h3>Cozy Pines Suite: UI/UX Design</h3>
+            <p>A modern UI design for an Airbnb-style accommodation listing.</p>
+            <div class="project-tech-container">
+                <span class="project-tech">Figma</span>
+            </div>
+            <a href="figma.com/proto/lYC5HjZ8MNR9Pcrj7mqtUi/CLIENT-1_COZY-PINES-SUITE-LANDING-PAGE-DESIGN?node-id=0-1&p=f&t=NXe1AAVdWzih1gSr-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=47%3A598" target="_blank" class="project-btn">View Project</a>
+        </div>
+
+        <div class="project-card" data-category="design">
+            <div class="project-img-wrapper">
+                <img src="../static/d8.png" alt="Events Rental Hub UI/UX">
+            </div>
+            <h3>The Wooden Nest: UI/UX Design</h3>
+            <p>A warm and minimal UI design for a furniture and home décor brand.</p>
+            <div class="project-tech-container">
+                <span class="project-tech">Figma</span>
+            </div>
+            <a href="https://www.figma.com/proto/pILRO6EDF41OV3XF0qMlqp/CLIENT-4_-ASTRO-S-SOLE-LANDING-PAGE-DESIGN?node-id=1-32&t=3Hrv1wAJ0K5s4uXT-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" target="_blank" class="project-btn">View Project</a>
+        </div>
+
+
+
+
+        <!-- add more projects -->
+    </div>
+</section>
+
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+    <div class="section-header">
+        <h2>Contact Me</h2>
+        <p>Get in touch via email or connect with me on social platforms</p>
+    </div>
+
+    <div class="contact-container">
+        <!-- Gmail -->
+        <div class="contact-card">
+            <i class="fas fa-envelope contact-icon"></i>
+            <h3>Email</h3>
+             <a href="mailto:hhannafranchesca03@gmail.com" class="contact-link">hhannafranchesca03@gmail.com</a>
+        </div>
+
+        <!-- GitHub -->
+        <div class="contact-card">
+            <i class="fab fa-github contact-icon"></i>
+            <h3>GitHub</h3>
+            <a href="https://github.com/hhannafranchesca" target="_blank" class="contact-link">github.com/hhannafranchesca</a>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="contact-card">
+            <i class="fab fa-linkedin contact-icon"></i>
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/hanna-franchesca-herradura-2b6b02385/" target="_blank" class="contact-link">linkedin.com/in/hanna-franchesca-herradura</a>
+        </div>
+
+        <!-- Facebook -->
+        <div class="contact-card">
+            <i class="fab fa-facebook contact-icon"></i>
+            <h3>Facebook</h3>
+            <a href="https://www.facebook.com/hannafranchesca.herradura/" target="_blank" class="contact-link">facebook.com/hannafranchesca.herradura</a>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer-section-alt">
+    <div class="footer-container-alt">
+        <!-- Column 1: About / Brand -->
+        <div class="footer-column">
+            <h3>Hanna Franchesca Herradura</h3>
+            <p>Web Developer | UI/UX Designer</p>
+            <p>Building web-based systems and interactive dashboards with user-centered design.</p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- Column 3: Connect / Socials -->
+        <div class="footer-column">
+            <h4>Connect With Me</h4>
+            <div class="footer-socials-alt">
+                <a href="hhannafranchesca03@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/hhannafranchesca" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hanna-franchesca-herradura-2b6b02385/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/hannafranchesca.herradura/" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copy-alt">
+        <p>&copy; 2026 Hanna Franchesca Herradura. All rights reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
+
+<script>
+window.addEventListener('load', () => {
+    const links = document.querySelectorAll('.nav-container a');
+    const indicator = document.querySelector('.nav-indicator');
+    const container = document.querySelector('.nav-container');
+
+    // Move the indicator under the active link
+    function moveIndicator(el) {
+        const containerRect = container.getBoundingClientRect();
+        const elRect = el.getBoundingClientRect();
+        const offsetLeft = elRect.left - containerRect.left;
+
+        indicator.style.width = el.offsetWidth + 'px';
+        indicator.style.left = offsetLeft + 'px';
+    }
+
+    // Initial position
+    const activeLink = document.querySelector('.nav-container a.active') || links[0];
+    moveIndicator(activeLink);
+
+    // Update on click
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            links.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            moveIndicator(link);
+        });
+    });
+
+    // Update indicator on window resize
+    window.addEventListener('resize', () => {
+        const active = document.querySelector('.nav-container a.active');
+        if (active) moveIndicator(active);
+    });
+    
+});
+
+</script>
+
+
+<!--NAVBAR -->
+<script>
+    const header = document.querySelector('.header-wrapper');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
+
+<!--PROJECG-->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projects = document.querySelectorAll(".project-card");
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            const category = btn.getAttribute("data-category");
+
+            projects.forEach(project => {
+                // Show all if category is 'all', otherwise match data-category
+                if(category === "all" || project.getAttribute("data-category") === category) {
+                    project.style.display = "flex"; // show
+                } else {
+                    project.style.display = "none"; // hide
+                }
+            });
+        });
+    });
+});
+</script>
+
+<!--carousel/slider-->
+<script>
+const swiper = new Swiper(".swiper", {
+  slidesPerView: 7,       // 4 cards on desktop
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 2000,          // 3000ms = 3 seconds per slide
+    disableOnInteraction: false, // continue autoplay even after user interacts
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    0: { slidesPerView: 1 },
+    600: { slidesPerView: 2 },
+    900: { slidesPerView: 4 },
+  },
+});
+</script>
