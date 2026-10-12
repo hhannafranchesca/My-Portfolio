@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
-<link rel="stylesheet" href="static/index_style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-SOMEHASH" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-
-<!-- Swiper CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="static/index_style.css">
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+    <!-- Swiper CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    >
 </head>
+
 <body>
+
+    <!-- Keep your existing portfolio content here -->
+    <!-- Swiper JS: load after the page content -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Keep your existing JavaScript files/scripts here,
+         after the Swiper library if they initialize Swiper -->
+</body>
+</html>
+
 
 <header class="header-wrapper">
     <nav class="nav-container">
@@ -54,7 +68,7 @@
         <!-- Buttons container -->
         <div class="hero-buttons">
            <div class="hero-buttons">
-                <a href="static/hanna.pdf" class="cv-button" target="_blank">
+                <a href="static/FRANCHESCA.pdf" class="cv-button" target="_blank">
                     <i class="fas fa-file-pdf"></i> View My CV
                 </a>
                 <a href="#projects" class="projects-button">
@@ -543,108 +557,167 @@
 </body>
 </html>
 
+<!-- NAVBAR INDICATOR, SCROLL, PROJECT FILTER, AND SWIPER -->
 <script>
-window.addEventListener('load', () => {
-    const links = document.querySelectorAll('.nav-container a');
-    const indicator = document.querySelector('.nav-indicator');
-    const container = document.querySelector('.nav-container');
+document.addEventListener("DOMContentLoaded", function () {
 
-    // Move the indicator under the active link
-    function moveIndicator(el) {
-        const containerRect = container.getBoundingClientRect();
-        const elRect = el.getBoundingClientRect();
-        const offsetLeft = elRect.left - containerRect.left;
+    // =========================
+    // NAVBAR INDICATOR
+    // =========================
+    const navContainer = document.querySelector(".nav-container");
+    const navLinks = document.querySelectorAll(".nav-container a");
+    const indicator = document.querySelector(".nav-indicator");
 
-        indicator.style.width = el.offsetWidth + 'px';
-        indicator.style.left = offsetLeft + 'px';
+    function moveIndicator(link) {
+        if (!navContainer || !indicator || !link) return;
+
+        const containerRect = navContainer.getBoundingClientRect();
+        const linkRect = link.getBoundingClientRect();
+
+        indicator.style.width = linkRect.width + "px";
+        indicator.style.left =
+            (linkRect.left - containerRect.left) + "px";
     }
 
-    // Initial position
-    const activeLink = document.querySelector('.nav-container a.active') || links[0];
-    moveIndicator(activeLink);
+    function updateIndicator() {
+        if (!navLinks.length || !indicator || !navContainer) return;
 
-    // Update on click
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            links.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-            moveIndicator(link);
+        const activeLink =
+            navContainer.querySelector("a.active") || navLinks[0];
+
+        moveIndicator(activeLink);
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.forEach(item => item.classList.remove("active"));
+            this.classList.add("active");
+            moveIndicator(this);
         });
     });
 
-    // Update indicator on window resize
-    window.addEventListener('resize', () => {
-        const active = document.querySelector('.nav-container a.active');
-        if (active) moveIndicator(active);
-    });
-    
-});
+    // Recalculate after the initial page layout
+    requestAnimationFrame(updateIndicator);
 
-</script>
+    // Recalculate after fonts finish loading
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(updateIndicator);
+    }
+
+    // Recalculate after resizing or changing orientation
+    window.addEventListener("resize", updateIndicator);
+    window.addEventListener("orientationchange", updateIndicator);
+
+    // Observe navbar size changes
+    if (navContainer && "ResizeObserver" in window) {
+        const navObserver = new ResizeObserver(updateIndicator);
+        navObserver.observe(navContainer);
+    }
 
 
-<!--NAVBAR -->
-<script>
-    const header = document.querySelector('.header-wrapper');
+    // =========================
+    // NAVBAR SCROLL EFFECT
+    // =========================
+    const header = document.querySelector(".header-wrapper");
 
-    window.addEventListener('scroll', () => {
+    function updateHeader() {
+        if (!header) return;
+
         if (window.scrollY > 50) {
-            header.classList.add('scrolled');
+            header.classList.add("scrolled");
         } else {
-            header.classList.remove('scrolled');
+            header.classList.remove("scrolled");
         }
-    });
-</script>
+    }
 
-<!--PROJECG-->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("scroll", updateHeader, {
+        passive: true
+    });
+
+    updateHeader();
+
+
+    // =========================
+    // PROJECT FILTER
+    // =========================
     const filterButtons = document.querySelectorAll(".filter-btn");
     const projects = document.querySelectorAll(".project-card");
 
-    filterButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            // Remove active class from all buttons
-            filterButtons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            this.classList.add("active");
 
-            const category = btn.getAttribute("data-category");
+            const category = this.getAttribute("data-category");
 
             projects.forEach(project => {
-                // Show all if category is 'all', otherwise match data-category
-                if(category === "all" || project.getAttribute("data-category") === category) {
-                    project.style.display = "flex"; // show
-                } else {
-                    project.style.display = "none"; // hide
-                }
+                const matches =
+                    category === "all" ||
+                    project.getAttribute("data-category") === category;
+
+                project.style.display = matches ? "flex" : "none";
             });
         });
     });
-});
-</script>
 
-<!--carousel/slider-->
-<script>
-const swiper = new Swiper(".swiper", {
-  slidesPerView: 7,       // 4 cards on desktop
-  spaceBetween: 30,
-  loop: true,
-  autoplay: {
-    delay: 2000,          // 3000ms = 3 seconds per slide
-    disableOnInteraction: false, // continue autoplay even after user interacts
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    0: { slidesPerView: 1 },
-    600: { slidesPerView: 2 },
-    900: { slidesPerView: 4 },
-  },
+
+    // =========================
+    // SWIPER CAROUSEL
+    // =========================
+    if (typeof Swiper !== "undefined") {
+        const swiperElement = document.querySelector(".swiper");
+
+        if (swiperElement) {
+            new Swiper(".swiper", {
+                slidesPerView: 7,
+                spaceBetween: 30,
+                loop: true,
+
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false
+                },
+
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true
+                },
+
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                },
+
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 15
+                    },
+                    600: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    900: {
+                        slidesPerView: 4,
+                        spaceBetween: 25
+                    },
+                    1200: {
+                        slidesPerView: 7,
+                        spaceBetween: 30
+                    }
+                },
+
+                on: {
+                    init: function () {
+                        requestAnimationFrame(updateIndicator);
+                    },
+                    resize: function () {
+                        requestAnimationFrame(updateIndicator);
+                    }
+                }
+            });
+        }
+    }
+
 });
 </script>
