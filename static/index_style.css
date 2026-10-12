@@ -899,3 +899,271 @@ body {
         justify-content: center;
     }
 }
+
+
+/* =====================================
+   MOBILE RESPONSIVE FIX
+   ===================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* NAVBAR */
+@media screen and (max-width: 768px) {
+
+    body {
+        padding-top: 110px;
+    }
+
+    .header-wrapper {
+        top: 10px;
+        left: 0;
+        width: 100%;
+        padding: 0 10px;
+        justify-content: center;
+    }
+
+    .nav-container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 10px;
+        border-radius: 22px;
+    }
+
+    .nav-logo {
+        margin: 0;
+        font-size: 20px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .nav-links,
+    .nav-container ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px 16px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-container a {
+        font-size: 13px;
+        letter-spacing: 0;
+        padding: 6px 0;
+    }
+
+    .nav-indicator {
+        display: none;
+    }
+
+    /* HOME / HERO SECTION */
+    .home-banner {
+        width: 100%;
+        min-height: auto;
+        padding: 35px 20px 50px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .banner-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        flex: none;
+    }
+
+    .banner-content h1 {
+        width: 100%;
+        overflow-wrap: anywhere;
+        line-height: 1.08;
+    }
+
+    .first-name {
+        font-size: clamp(38px, 9vw, 58px);
+    }
+
+    .last-name {
+        font-size: clamp(42px, 10vw, 64px);
+    }
+
+    .intro-text {
+        font-size: clamp(16px, 4vw, 20px);
+        letter-spacing: 0.5px;
+    }
+
+    .role-text {
+        font-size: clamp(16px, 4vw, 20px);
+        margin-top: 14px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .cv-button,
+    .projects-button {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+
+    .profile-wrapper {
+        width: 100%;
+        min-width: 0;
+        flex: none;
+        justify-content: center;
+    }
+
+    .profile-border {
+        width: clamp(180px, 55vw, 240px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        flex-shrink: 0;
+    }
+
+    /* ABOUT SECTION */
+    .about-section,
+    .certifications-section,
+    .projects-section,
+    .contact-section {
+        padding: 55px 20px;
+    }
+
+    .about-container {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-card,
+    .skills-card {
+        width: 100%;
+        min-width: 0;
+        padding: 24px 20px;
+    }
+
+    .about-card h2,
+    .skills-card h2 {
+        font-size: 28px;
+    }
+
+    .about-card p {
+        font-size: 16px;
+    }
+
+    /* CERTIFICATIONS */
+    .certifications-container {
+        width: 100%;
+        max-width: 100%;
+        gap: 20px;
+    }
+
+    .cert-card {
+        width: 100%;
+        max-width: 320px;
+        min-width: 0;
+    }
+
+    /* PROJECTS */
+    .projects-container {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .projects-filter {
+        gap: 10px;
+    }
+
+    .filter-btn {
+        padding: 9px 16px;
+    }
+
+    /* CONTACT */
+    .contact-container {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 320px;
+        min-width: 0;
+    }
+
+    /* FOOTER */
+    .footer-section-alt {
+        padding: 40px 20px;
+    }
+
+    .footer-container-alt {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-socials-alt {
+        justify-content: center;
+    }
+}
+
+/* EXTRA SMALL PHONES */
+@media screen and (max-width: 380px) {
+
+    .nav-container {
+        padding: 10px 8px;
+    }
+
+    .nav-container ul {
+        gap: 6px 12px;
+    }
+
+    .nav-container a {
+        font-size: 12px;
+    }
+
+    .first-name {
+        font-size: 36px;
+    }
+
+    .last-name {
+        font-size: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cv-button,
+    .projects-button {
+        width: 100%;
+        max-width: 240px;
+    }
+}
